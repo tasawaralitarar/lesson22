@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お支払い - ALI BABA SHOP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="auth.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <a class="brand" href="index.html">🛒 ALI BABA SHOP</a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">商品一覧</a>
+            <a href="cart.html" class="nav-link active">🛒 カート</a>
+            <a href="orders.html" class="nav-link">📦 注文履歴</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn btn-login">ログイン</a>
+            <a href="register.html" class="btn btn-register">会員登録</a>
+        </div>
+    </header>
+    <main class="container">
+        <h1>お支払い</h1>
+        <div id="payment-container">
+            <h2 id="amount-display">支払金額：0円</h2>
+            <form id="payment-form">
+                <h3>支払方法</h3>
+                <label class="pay-option">
+                    <input type="radio" name="method" value="credit" checked> 💳 クレジットカード
+                </label>
+                <label class="pay-option">
+                    <input type="radio" name="method" value="bank"> 🏦 銀行振込
+                </label>
+                <label class="pay-option">
+                    <input type="radio" name="method" value="cod"> 📦 代金引換
+                </label>
+                <button type="submit" id="pay-btn">決済する</button>
+            </form>
+            <div id="message" class="message"></div>
+        </div>
+    </main>
+    <script src="payment.js"></script>
+</body>
+</html>

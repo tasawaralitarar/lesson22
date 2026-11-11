@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品管理 - ALI BABA SHOP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="auth.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <a class="brand" href="index.html">🛒 ALI BABA SHOP</a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">商品一覧</a>
+            <a href="cart.html" class="nav-link">🛒 カート</a>
+            <a href="orders.html" class="nav-link">📦 注文履歴</a>
+            <a href="admin.html" class="nav-link active">⚙️ 商品管理</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn btn-login">ログイン</a>
+            <a href="register.html" class="btn btn-register">会員登録</a>
+        </div>
+    </header>
+    <main class="container container-wide">
+        <h1>商品管理</h1>
+        <p id="message" role="status"></p>
+
+        <div id="admin-area">
+            <section class="admin-panel">
+                <h2 id="form-title">新しい商品を登録</h2>
+                <form id="product-form" class="admin-form">
+                    <div class="admin-fields">
+                        <label class="admin-field wide">商品名
+                            <input id="name" type="text" maxlength="100" required>
+                        </label>
+                        <label class="admin-field">価格（円）
+                            <input id="price" type="number" min="1" max="10000000" required>
+                        </label>
+                        <label class="admin-field">在庫数量
+                            <input id="stock" type="number" min="0" max="1000000" value="0" required>
+                        </label>
+                    </div>
+                    <div class="admin-image-row">
+                        <div class="image-preview" id="image-preview">画像なし</div>
+                        <div class="image-controls">
+                            <label class="admin-field">商品画像（JPEG・PNG・WebP／5MBまで）
+                                <input id="image" type="file" accept="image/jpeg,image/png,image/webp">
+                            </label>
+                            <button type="button" id="remove-image" class="btn-sm btn-ghost" hidden>画像を外す</button>
+                        </div>
+                    </div>
+                    <div class="admin-actions">
+                        <button type="submit" id="submit-btn">登録する</button>
+                        <button type="button" id="cancel-btn" class="btn-ghost" hidden>編集をやめる</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="admin-panel">
+                <h2>商品一覧</h2>
+                <div class="table-scroll">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>画像</th>
+                                <th class="num">ID</th>
+                                <th>商品名</th>
+                                <th class="num">価格</th>
+                                <th class="num">在庫</th>
+                                <th>状態</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-products">
+                            <tr><td colspan="7">読み込み中...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>

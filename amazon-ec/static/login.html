@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a class="brand" href="index.html">🛒 ALI BABA SHOP</a>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn btn-login">ログイン</a>
+            <a href="register.html" class="btn btn-register">会員登録</a>
+        </div>
+    </header>
+    <main class="container">
+        <div class="auth-card">
+            <h1>ログイン</h1>
+            <p id="current-user"></p>
+            <form id="login-form">
+                <div class="field"><label>ユーザー名 <input id="username" required></label></div>
+                <div class="field"><label>パスワード <input id="password" type="password" required></label></div>
+                <button type="submit">ログイン</button>
+            </form>
+            <button id="logout" type="button">ログアウト</button>
+            <p id="message" role="status"></p>
+        </div>
+    </main>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ショッピングカート - ALI BABA SHOP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="auth.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <a class="brand" href="index.html">🛒 ALI BABA SHOP</a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">商品一覧</a>
+            <a href="cart.html" class="nav-link active">🛒 カート</a>
+            <a href="orders.html" class="nav-link">📦 注文履歴</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html" class="btn btn-login">ログイン</a>
+            <a href="register.html" class="btn btn-register">会員登録</a>
+        </div>
+    </header>
+    <main class="container">
+        <h1>ショッピングカート</h1>
+        <div id="cart-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>商品名</th>
+                        <th>価格</th>
+                        <th>数量</th>
+                        <th>小計</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                </tbody>
+            </table>
+            <h2 id="cart-total">合計: ¥0</h2>
+            <div>
+                <button id="checkout-btn">注文を確定する</button>
+            </div>
+        </div>
+        <div id="message" class="message"></div>
+    </main>
+    <script src="cart.js"></script>
+</body>
+</html>

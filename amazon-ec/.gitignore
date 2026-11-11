@@ -1,0 +1,4 @@
+ec.db
+ec_backup*.db
+static/uploads/*
+!static/uploads/.gitkeep
